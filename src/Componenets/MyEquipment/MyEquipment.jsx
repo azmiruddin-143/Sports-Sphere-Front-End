@@ -9,11 +9,9 @@ const MyEquipment = () => {
     const { user } = useContext(authContext)
 
     const [equipment, setEquipment] = useState([]);
-    // const [dilet,setDilet] = useState(equipment)
-    // console.log(dilet);
+  
 
-
-    const userEmail = user.email // Replace with actual logged-in user's email
+    const userEmail = user.email 
 
     useEffect(() => {
         const fetchEquipment = async () => {
@@ -22,7 +20,7 @@ const MyEquipment = () => {
                     `http://localhost:5000/myequipment?email=${userEmail}`
                 );
                 const data = await response.json();
-                setEquipment(data); // Set the filtered equipment list
+                setEquipment(data); 
             } catch (error) {
                 console.error("Error fetching equipment:", error);
             }
@@ -30,26 +28,6 @@ const MyEquipment = () => {
 
         fetchEquipment();
     }, [userEmail]);
-
-
-    // Handle delete function
-    // const handleDelete = (id) => {
-    //     fetch(`http://localhost:5000/myequipment/${id}`, {
-    //         method: "DELETE",
-    //     })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             if (data.deletedCount > 0) {
-    //                 // Remove the deleted item from the state
-    //                 const remainingEquipments = equipment.filter(
-    //                     (equipment) => equipment._id !== id
-    //                 );
-    //                 setEquipment(remainingEquipments);
-    //             }
-    //         });
-    // };
-
-    // others
 
 
 
