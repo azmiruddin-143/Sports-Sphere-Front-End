@@ -4,7 +4,7 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const SingleEquipment = ({ equipment,onDelete }) => {
-    const { _id, image, productName, category, description, price, rating, selectedDate, quantity, note } = equipment
+    const { _id, image, productName, category,  price, rating, selectedDate} = equipment
 
    
     return (

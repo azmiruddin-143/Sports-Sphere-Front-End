@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { Fade, Slide } from 'react-awesome-reveal';
 const TrendingProducts = () => {
   const [category, setCategory] = useState([])
-  console.log(category);
   useEffect(() => {
     fetch('http://localhost:5000/sportsall')
       .then(res => res.json())
@@ -17,7 +16,6 @@ const TrendingProducts = () => {
   }, [])
   return (
 
-          // trending product //
           
     <Slide direction="up" duration={2000} triggerOnce>
       <div className='md:my-28 text-center  my-14 bg-gray-100'>
@@ -27,6 +25,7 @@ const TrendingProducts = () => {
           <Swiper
             modules={[Navigation, Autoplay]}
             navigation
+            loop ={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,

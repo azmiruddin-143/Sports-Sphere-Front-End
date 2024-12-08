@@ -11,8 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 const Banner = () => {
     return (
-        // Slider Section//
-        
+    
         <div className="w-full relative">
             <Swiper
                 modules={[Navigation, Autoplay,EffectFade]}
@@ -26,24 +25,22 @@ const Banner = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                 }}
-                effect="fade"  // Apply the fade effect
+                effect="fade"  
                 slidesPerView={1}
                 loop={true}
                 className="2xl:h-[850px] md:h-[450px] lg:h-[600px] h-[200px]"
             >
                 <SwiperSlide>
                     <div style={{
-                        backgroundImage: `url(${BasketballBanner})`, backgroundColor: "#3c448384",
-                        backgroundBlendMode: "multiply"
-                    }} className="bg-cover  bg-no-repeat bg-center w-full h-full ">
+                        backgroundImage: `url(${BasketballBanner})`
+                    }} className="bg-cover  bg-no-repeat bg-center w-full h-full">
 
                     </div>
 
                 </SwiperSlide>
                 <SwiperSlide>
                     <div style={{
-                        backgroundImage: `url(${cricketslider})`, backgroundColor: "#3c448384",
-                        backgroundBlendMode: "multiply"
+                        backgroundImage: `url(${cricketslider})`
                     }} className="bg-cover  bg-no-repeat bg-center w-full h-full ">
 
                     </div>
@@ -53,8 +50,7 @@ const Banner = () => {
                
                     <SwiperSlide>
                         <div style={{
-                            backgroundImage: `url(${TennisbatBaner})`, backgroundColor: "#3c448384",
-                            backgroundBlendMode: "multiply"
+                            backgroundImage: `url(${TennisbatBaner})`
                         }} className="bg-cover bg-no-repeat bg-center w-full h-full ">
 
                         </div>
@@ -63,14 +59,11 @@ const Banner = () => {
 
                 <SwiperSlide>
                     <div style={{
-                        backgroundImage: `url(${FootballBaner})`, backgroundColor: "#3c448384",
-                        backgroundBlendMode: "multiply"
+                        backgroundImage: `url(${FootballBaner})`
                     }} className="bg-cover bg-no-repeat bg-center w-full h-full ">
 
                     </div>
                 </SwiperSlide>
-
-
 
 
             </Swiper>

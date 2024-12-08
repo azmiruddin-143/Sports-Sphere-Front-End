@@ -50,7 +50,6 @@ const MyEquipment = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
                         if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -86,7 +85,7 @@ const MyEquipment = () => {
                         <div className="flex justify-center my-5">
                             <div>
                                 <h1 className='text-4xl py-3'>No Data Found ?</h1>
-                                <Link to={'/addequipment'} > <button className='py-2 my-3 px-6 bg-[#2e9ab5] rounded-md'>Add Equipment</button> </Link>
+                                <Link to={'/addequipment'} > <button className='py-2 my-3 px-6 bg-[#9dc923] rounded-md'>Add Equipment</button> </Link>
                             </div>
                         </div>
 

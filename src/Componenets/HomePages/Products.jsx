@@ -4,10 +4,8 @@ import SingleProduct from './SingleProduct';
 import { Slide } from 'react-awesome-reveal';
 const Products = () => {
     const productLoader = useLoaderData()
-    console.log(productLoader);
     return (
          
-        // latest 6 data show//
 
         <div className='sm:my-16 my-5'>
             <Slide direction="up" duration={2000} triggerOnce>

@@ -37,8 +37,7 @@ const AddEquipment = () => {
         const userName = from.username.value
         const note = from.note.value
         const equipmentObject = { image, productName, createdAt: new Date(), category, description, price, rating, selectedDate, quantity, email, userName, note, }
-        console.log(equipmentObject);
-
+     
 
         if (!image.includes('.png') && !image.includes('.jpg')) {
             toast.error("Enter the correct image URL", {
@@ -46,6 +45,21 @@ const AddEquipment = () => {
             });
             return;
         }
+
+        if(category === "Select a Category"){
+            toast.error("Select a Category name", {
+                autoClose: 3000,
+            });
+            return;
+        }
+        if(rating === "Select a rating"){
+            toast.error("Select a rating ", {
+                autoClose: 3000,
+            });
+            return;
+        }
+
+
        
         fetch("http://localhost:5000/sports", {
             method: "POST",
@@ -60,7 +74,7 @@ const AddEquipment = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: "Post SuccessFull",
-                        text: "Apnar Post Kora Complete oice",
+                        text: "Your product post is complete",
                         icon: "success"
                     });
 
@@ -104,7 +118,7 @@ const AddEquipment = () => {
                             <label className="label">
                                 <span className="label-text">Category</span>
                             </label>
-                            <select name="category" className="select select-bordered" required>
+                            <select name="category" className="select select-bordered" placeholder="Select a Category" required>
                                 <option disabled selected>
                                     Select a Category
                                 </option>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
 
 const SingleProduct = ({ product }) => {
-    const { _id, image, productName, category, description, price, rating, selectedDate, quantity, note } = product
+    const { _id, image, productName, category,  price, rating,  } = product
 
     const discountPrice = parseInt(price) + 200;
     return (

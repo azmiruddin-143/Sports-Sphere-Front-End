@@ -9,8 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Update = () => {
     const updateLoader = useLoaderData()
-    console.log(updateLoader);
-    const { _id, image, productName, category, selectedDates, description, price, rating, quantity, note } = updateLoader
+    const { _id, image, productName, category, selectedDates,  price, rating } = updateLoader
     const { user } = useContext(authContext)
     const navigate = useNavigate()
  
@@ -18,7 +17,6 @@ const Update = () => {
     const [selectedDate, setSelectedDate] = useState(null);
 
     useEffect(() => {
-        console.log(selectedDates); 
         const defaultDateFromDB = updateLoader.selectedDate; 
         if (defaultDateFromDB) {
             const formattedDate = new Date(defaultDateFromDB); 
@@ -48,7 +46,6 @@ const Update = () => {
         const email = from.email.value
         const userName = from.username.value
         const equipmentObject = { image, productName, category, price, rating, selectedDate, email, userName, }
-        console.log(equipmentObject);
 
         fetch(`http://localhost:5000/myequipment/${_id}`, {
             method: "PUT",

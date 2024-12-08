@@ -4,7 +4,6 @@ import { Navigate, useLocation } from 'react-router-dom';
 import Loader from '../LoaderPage/Loader';
 
 const PrivateRoot = ({children}) => {
-    // Private routs//
     const {user,loader} = useContext(authContext)
     const location = useLocation()
  

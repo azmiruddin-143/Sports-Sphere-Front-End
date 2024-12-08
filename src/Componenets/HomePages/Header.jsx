@@ -6,7 +6,6 @@ import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { Helmet } from 'react-helmet-async';
 import { authContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
@@ -24,10 +23,10 @@ const Header = () => {
                 navigate("/");
             })
             .catch((error) => {
-                toast.error(`login failed: ${error.message}`, {
+                toast.error(`Logout failed: ${error.message}`, {
                     autoClose: 3000,
                 });
-                console.log(error.message);
+               
             });
 
     };
@@ -47,8 +46,7 @@ const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
-    // bg-[#00000092]
-
+    
     return (
         <div
             className={`sticky top-0 w-full z-40 transition-all duration-300 ${isBlurred ? "bg-[#9dc92395] backdrop-blur-md " : "bg-base-200"
@@ -100,7 +98,7 @@ const Header = () => {
                             )}
                         </div>
                         <div className='flex items-center gap-0 sm:gap-3'>
-                            <img className='sm:w-[60px] w-[40px] ' src={sitelogo} alt="" />
+                            <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' :"sm:w-[60px] w-[40px] bg-[#f5f3f3]  rounded-full"}`} src={sitelogo} alt="" />
                             <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-base pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> Sports
                                 <span className={`${isBlurred && "text-black"} text-[black] relative sm:right-2 lg:right-1 xl:right-2 right-1 font-bold`}> Sphere</span>
                             </h1>
@@ -108,7 +106,7 @@ const Header = () => {
                     </div>
 
                     <div className="navbar-center  xl:ml-10 2xl:ml-0 hidden lg:flex">
-                        <ul className={`${isBlurred ? "xl:text-lg text-md text-black flex gap-3 sm:gap-6 xl:gap-8" : "xl:text-lg text-md dark:text-white  flex gap-3 sm:gap-6 xl:gap-8"}`}>
+                        <ul className={`${isBlurred ? "xl:text-lg text-md text-black flex gap-3 sm:gap-6 xl:gap-8" : "xl:text-lg text-md dark:text-black  flex gap-3 sm:gap-6 xl:gap-8"}`}>
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
@@ -158,9 +156,10 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
+                        
                         <div className="flex gap-0 sm:gap-4 items-center">
-                            {/* trogole dark and ligth */}
-                            <Routes>
+                            
+                        <Routes>
                                 <Route path="/" element={
                                        <label className="swap swap-rotate">
                                        {/* this hidden checkbox controls the state */}
@@ -191,7 +190,7 @@ const Header = () => {
                                 } />
                             </Routes>
 
-                          
+                           
 
                             <div className="relative flex justify-center items-center group w-[70px] h-[70px]">
                                 {user && (

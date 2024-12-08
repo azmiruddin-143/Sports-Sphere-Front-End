@@ -25,7 +25,7 @@ const Register = () => {
         const photourl = event.target.photourl.value
         const email = event.target.email.value
         const password = event.target.password.value
-        console.log(trams, name, photourl, email, password);
+    
         if (!/[A-Z]/.test(password)) {
             toast.error("Must have an Uppercase letter in the password ", {
                 autoClose: 3000,
@@ -75,7 +75,7 @@ const Register = () => {
                         event.target.reset();
                     })
                     .catch((error) => {
-                        toast.error(`Update failed: ${error.message}`, {
+                        toast.error(`Registration failed: ${error.message}`, {
                             autoClose: 3000,
                         });
                     })
@@ -85,7 +85,7 @@ const Register = () => {
 
 
             .catch((error) => {
-                toast.error(`Update failed: ${error.message}`, {
+                toast.error(`Registration failed: ${error.message}`, {
                     autoClose: 3000,
                 });
             })
@@ -98,12 +98,15 @@ const Register = () => {
             .then((result) => {
                 const user = result.user
                 setuser(user)
+                navigate("/")
                 toast.success("Registration successful!", {
                     autoClose: 3000,
                 });
             })
             .catch((error) => {
-                console.log(error.message);
+                toast.error(`Registration failed: ${error.message}`, {
+                    autoClose: 3000,
+                });
             })
     }
 

@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='bg-[#13160b]   '>
-            <div className='grid sm:py-16 py-8 lg:grid-cols-4 gap-y-12 mx-8 sm:grid-cols-3 2xl:mx-36 xl:mx-28 lg:mx-10 sm:place-items-center xl:place-items-center my-10 md:my-0'>
+            <div className='grid sm:py-16 py-8 lg:grid-cols-4 gap-y-12 mx-8 sm:grid-cols-3 2xl:mx-36 xl:mx-28 lg:mx-10 sm:place-items-center xl:place-items-center my-0 md:my-0'>
                 <div className='space-y-4 sm:mt-12 md:mt-4 xl:mt-0 ' >
                     <h1 className='2xl:text-4xl xl:text-3xl text-2xl text-[white] font-bold'>Sports Sphere</h1>
                     <p className='xl:w-10/12 dark:text-white text-[#d1cccc] 2xl:text-lg xl:text-base'>Shop premium sports gear at unbeatable prices. Enjoy free shipping, exclusive deals, and fast delivery worldwide!"</p>
@@ -42,7 +42,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h1 className='text-[white] 2xl:text-3xl text-2xl font-bold lg:mt-5 xl:mt-0 lg:text-2xl'>Let’s get in touch</h1>
+                    <h1 className='dark:text-red-700 text-white 2xl:text-3xl text-2xl font-bold lg:mt-5 xl:mt-0 lg:text-2xl'>Let’s get in touch</h1>
                     <div className='flex text-white mt-3 items-center gap-2'>
                         <IoCall size={25} />
                         <h1>+8801933946077</h1>
@@ -52,7 +52,7 @@ const Footer = () => {
                         <div className='flex gap-5 items-center'>
                             <input type="email" placeholder="Your E-mail" name='email' className="input input-bordered w-[100%]" required />
                             <div >
-                                <button className='bg-[#9dc923] flex justify-center px-3 py-3 rounded-full'> <FaArrowRight size={20} /></button>
+                                <button className='bg-[#9dc923] text-black flex justify-center px-3 py-3 rounded-full'> <FaArrowRight size={20} /></button>
                             </div>
                         </div>
 
