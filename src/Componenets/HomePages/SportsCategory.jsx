@@ -13,8 +13,9 @@ const SportsCategory = () => {
     //     })
     // }, [])
     return (
+        // categories section//
+        
         <div className='xl:mt-32 md:mt-20 mt-8'>
-
             <div className='flex items-center  justify-center gap-5' >
                  <div className="grid md:grid-cols-5  grid-cols-2 gap-6">
                      <button className="border border-[#baf120] py-2 hover:bg-[#baf120] px-4 ">Football</button>
