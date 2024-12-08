@@ -1,6 +1,6 @@
 import React from 'react';
-import { AiFillPlayCircle } from "react-icons/ai"; // Play Icon
-import { BsCheckCircleFill } from "react-icons/bs"; // Check Icon
+import { AiFillPlayCircle } from "react-icons/ai"; 
+import { BsCheckCircleFill } from "react-icons/bs"; 
 import heroimage from "../../assets/hero-image.jpg"
 import { Slide } from 'react-awesome-reveal';
 const AthleticIntro = () => {
