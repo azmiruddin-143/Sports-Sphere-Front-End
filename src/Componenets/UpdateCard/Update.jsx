@@ -33,7 +33,7 @@ const Update = () => {
                 month: "2-digit",
                 year: "2-digit",
             });
-            setSelectedDate(formattedDate); // Directly store Date object
+            setSelectedDate(formattedDate); 
         }
     };
 
@@ -124,7 +124,7 @@ const Update = () => {
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
-                        {/* <input type="text" name='rating' placeholder="Enter your rating" className="input input-bordered" required /> */}
+                       
                         <select name="rating" className="select select-bordered" defaultValue={rating} required>
                             <option disabled selected>
                                 Select a rating
@@ -145,9 +145,9 @@ const Update = () => {
 
                         <DatePicker
                             selected={selectedDate}
-                            required // Use the Date object from state
-                            onChange={handleDateChange} // Update state when a new date is selected
-                            dateFormat="MM/dd/yy" // Show date in this format
+                            required 
+                            onChange={handleDateChange} 
+                            dateFormat="MM/dd/yy" 
                             placeholderText="Select Date"
                             className="input input-bordered w-full"
                         />
