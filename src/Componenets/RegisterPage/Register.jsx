@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
+    // User Register//
+    
     const { registerUser, myProfileUpdate, googleRegister, setuser } = useContext(authContext)
     const [show, setHide] = useState(false)
     const navigate = useNavigate()
