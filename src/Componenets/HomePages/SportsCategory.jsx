@@ -3,13 +3,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
-import categoriesbanner from "../../assets/categories-banner.png";
+import categoriesbanner from "../../assets/categories-banner.jpg";
+import { Link } from "react-router-dom";
 
 const SportsCategory = () => {
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/sportsall")
+        fetch("https://server-sports.vercel.app/sportsall")
             .then((res) => res.json())
             .then((data) => {
                 const uniqueCategories = [...new Map(data.map((item) => [item.category, item])).values()];
@@ -61,10 +62,11 @@ const SportsCategory = () => {
                                     backgroundImage: `url(${category.image})`,
                                 }} >
 
+                                <Link to={"/allSportsEquipment"}>
                                 <button
                                     className="bg-lime-500 mb-8  text-white px-4 py-2 rounded-full font-semibold transition-transform transform hover:scale-105">
                                     {category.category}
-                                </button>
+                                </button></Link>
 
                             </div>
                         </SwiperSlide>

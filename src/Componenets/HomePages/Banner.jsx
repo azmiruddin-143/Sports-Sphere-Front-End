@@ -1,8 +1,8 @@
 import React from 'react';
-import FootballBaner from "../../assets/Football-Baner.png"
-import BasketballBanner from "../../assets/Basketball-Banner.png"
-import TennisbatBaner from "../../assets/Tennisbat-Baner.png"
-import cricketslider from "../../assets/cricket-slider.png"
+import FootballBaner from "../../assets/Football-Baner.jpg"
+import BasketballBanner from "../../assets/Basketball-Banner.jpg"
+import TennisbatBaner from "../../assets/Tennisbat-Baner.jpg"
+import cricketslider from "../../assets/cricket-slider.jpg"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation,EffectFade  } from "swiper/modules";

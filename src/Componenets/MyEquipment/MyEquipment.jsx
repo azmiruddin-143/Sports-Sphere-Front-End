@@ -17,7 +17,7 @@ const MyEquipment = () => {
         const fetchEquipment = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/myequipment?email=${userEmail}`
+                    `https://server-sports.vercel.app/myequipment?email=${userEmail}`
                 );
                 const data = await response.json();
                 setEquipment(data); 
@@ -45,7 +45,7 @@ const MyEquipment = () => {
 
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/myequipment/${id}`, {
+                fetch(`https://server-sports.vercel.app/myequipment/${id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())

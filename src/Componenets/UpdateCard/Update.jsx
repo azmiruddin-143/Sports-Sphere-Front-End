@@ -47,7 +47,8 @@ const Update = () => {
         const userName = from.username.value
         const equipmentObject = { image, productName, category, price, rating, selectedDate, email, userName, }
 
-        fetch(`http://localhost:5000/myequipment/${_id}`, {
+        fetch(`https://server-sports.vercel.app/myequipment/${_id}`, {
+            
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

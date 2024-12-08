@@ -24,7 +24,7 @@ const AthleticIntro = () => {
 
         {/* Right Side: Content */}
         <div className="mt-8 md:mt-0 md:w-1/2 md:pl-12 sm:text-center md:text-left">
-          <h1 className="lg:text-4xl text-2xl  dark:text-white leading-normal xl:text-6xl 2xl:w-8/12 font-bold  ">
+          <h1 className="lg:text-4xl text-2xl  dark:text-red-600 leading-normal xl:text-6xl 2xl:w-8/12 font-bold  ">
             Elevate Your Sports, Gear Up with Passion
           </h1>
 

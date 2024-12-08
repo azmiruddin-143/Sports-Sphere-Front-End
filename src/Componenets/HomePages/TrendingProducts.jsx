@@ -8,7 +8,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 const TrendingProducts = () => {
   const [category, setCategory] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/sportsall')
+    fetch('https://server-sports.vercel.app/sportsall')
       .then(res => res.json())
       .then(data => {
         setCategory(data)

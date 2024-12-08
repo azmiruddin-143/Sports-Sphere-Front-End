@@ -10,7 +10,7 @@ const AllSports = () => {
     const [sortedProducts, setSortedProducts] = useState(allproductLoader);
     const [isSorted,setisSorted] = useState(false)
     const handleSort = () => {
-        fetch("http://localhost:5000/sportSort")
+        fetch("https://server-sports.vercel.app/sportSort")
             .then(res => res.json())
             .then(data => setSortedProducts(data)) 
             setisSorted(true)

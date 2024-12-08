@@ -7,6 +7,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { authContext } from '../AuthProvider/AuthProvider';
+import DarkMode from './DarkMood';
 
 const Header = () => {
 
@@ -99,7 +100,7 @@ const Header = () => {
                         </div>
                         <div className='flex items-center gap-0 sm:gap-3'>
                             <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' :"sm:w-[60px] w-[40px] bg-[#f5f3f3]  rounded-full"}`} src={sitelogo} alt="" />
-                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-base pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> Sports
+                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> Sports
                                 <span className={`${isBlurred && "text-black"} text-[black] relative sm:right-2 lg:right-1 xl:right-2 right-1 font-bold`}> Sphere</span>
                             </h1>
                         </div>
@@ -158,16 +159,17 @@ const Header = () => {
                     <div className="navbar-end">
                         
                         <div className="flex gap-0 sm:gap-4 items-center">
+                           
                             
-                        <Routes>
+                         <Routes>
                                 <Route path="/" element={
                                        <label className="swap swap-rotate">
-                                       {/* this hidden checkbox controls the state */}
+                               
                                        <input type="checkbox" className="theme-controller" value="dark"/>
                                  
-                                       {/* sun icon */}
+                                 
                                        <svg
-                                         className="swap-off h-10 w-10 fill-current"
+                                         className="swap-off h-10 sm:w-10 w-8 fill-current"
                                          xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 24 24"
                                        >
@@ -176,9 +178,9 @@ const Header = () => {
                                          />
                                        </svg>
                                  
-                                       {/* moon icon */}
+                              
                                        <svg
-                                         className="swap-on h-10 w-10 fill-current"
+                                         className="swap-on h-10 sm:w-10 w-8 fill-current"
                                          xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 24 24"
                                        >
@@ -188,15 +190,14 @@ const Header = () => {
                                        </svg>
                                      </label>
                                 } />
-                            </Routes>
+                            </Routes> 
 
                            
-
-                            <div className="relative flex justify-center items-center group w-[70px] h-[70px]">
+                            <div className="relative flex justify-center items-center group w-[50px] sm:w-[70px] h-[70px]">
                                 {user && (
                                     <div style={{ textAlign: "center", marginTop: "0px" }}>
                                         <div className="avatar mt-1 online">
-                                            <div className="sm:max-w-16 max-w-12 rounded-full">
+                                            <div className="sm:max-w-16 max-w-10 rounded-full">
                                                 <img src={user?.photoURL} alt="User Profile"
                                                     data-tooltip-id="image-tooltip"
                                                     data-tooltip-content="azmirkhan"

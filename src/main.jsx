@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/sportslimit')
+        loader: () => fetch('https://server-sports.vercel.app/sportslimit')
       },
       {
         path: "/allSportsEquipment",
         element: <AllSports></AllSports>,
-        loader: () => fetch('http://localhost:5000/sportsall')
+        loader: () => fetch('https://server-sports.vercel.app/sportsall')
       },
       {
         path: "/addEquipment",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <PrivateRoot><Details></Details></PrivateRoot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/sportsall/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-sports.vercel.app/sportsall/${params.id}`)
       },
       {
         path: "/register",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`http://localhost:5000/myequipment/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-sports.vercel.app/myequipment/${params.id}`)
       }
     ]
   },

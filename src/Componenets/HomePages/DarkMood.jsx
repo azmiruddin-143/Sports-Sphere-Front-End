@@ -1,10 +1,13 @@
 
-
 const DarkMode = () => {
-
+ 
   return (
-    <h1>Not Aplay</h1>
+    <div>
+       <h1>no use</h1>
+    </div>
   );
 };
 
 export default DarkMode;
+
+
