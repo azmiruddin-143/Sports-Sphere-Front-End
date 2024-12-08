@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
+
 import Marquee from "react-fast-marquee";
 import { FaBolt } from 'react-icons/fa';
 
 const TextSlider = () => {
-    const marqueeRef = useRef();
 
     return (
         <Marquee
