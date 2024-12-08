@@ -16,6 +16,9 @@ const TrendingProducts = () => {
       })
   }, [])
   return (
+
+          // trending product //
+          
     <Slide direction="up" duration={2000} triggerOnce>
       <div className='md:my-28 text-center  my-14 bg-gray-100'>
 
