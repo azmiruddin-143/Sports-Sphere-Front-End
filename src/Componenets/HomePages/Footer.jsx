@@ -52,7 +52,7 @@ const Footer = () => {
                         <div className='flex gap-5 items-center'>
                             <input type="email" placeholder="Your E-mail" name='email' className="input input-bordered w-[100%]" required />
                             <div >
-                                <button className='bg-[#e09d15] flex justify-center px-3 py-3 rounded-full'> <FaArrowRight size={20} /></button>
+                                <button className='bg-[#9dc923] flex justify-center px-3 py-3 rounded-full'> <FaArrowRight size={20} /></button>
                             </div>
                         </div>
 
