@@ -11,6 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 const Banner = () => {
     return (
+        // Slider Section//
+        
         <div className="w-full relative">
             <Swiper
                 modules={[Navigation, Autoplay,EffectFade]}
