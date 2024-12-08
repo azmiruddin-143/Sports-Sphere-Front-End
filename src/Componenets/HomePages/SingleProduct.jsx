@@ -10,23 +10,23 @@ const SingleProduct = ({ product }) => {
     return (
         <div class="max-w-md p-4">
             <div class="bg-white rounded-lg p-2 shadow-lg overflow-hidden">
-                {/* <!-- Discount Badge --> */}
+            
                 <div class="relative">
                     <div class="absolute top-2 left-2 bg-[#9dc923] text-black text-xs font-semibold py-1 px-2 rounded-full">
                         Latest
                     </div>
                 </div>
 
-                {/* <!-- Product Image --> */}
+               
                 <img class="w-[400px] h-64 object-cover rounded-md" src={image} alt="Chek Trouser" />
 
-                {/* <!-- Product Info --> */}
+              
                 <div class="p-2">
-                    {/* <h2 class="text-lg font-semibold text-gray-800">{productName}</h2> */}
+                    
                     <Fade duration={500} cascade triggerOnce class="text-lg font-semibold text-gray-800">{productName}</Fade>
                     <p class="text-sm text-gray-600">{category}</p>
 
-                    {/* <!-- Price Section --> */}
+                  
                     <div class="flex items-center mt-2">
                         <span class="text-xl font-bold text-gray-900"> $ {price}</span>
                         <span class="ml-2 text-sm line-through text-gray-500">{discountPrice}</span>
