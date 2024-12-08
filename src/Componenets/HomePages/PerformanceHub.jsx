@@ -9,6 +9,8 @@ import { Slide } from 'react-awesome-reveal';
 const PerformanceHub = () => {
     return (
 
+        //  Performance//
+        
         <Slide direction="up" duration={2000} triggerOnce>
               <div className='lg:mx-3 xl:my-28 xl:mx-24 2xl:mx-32'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ">
