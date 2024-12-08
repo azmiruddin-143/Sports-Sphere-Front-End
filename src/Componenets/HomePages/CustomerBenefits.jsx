@@ -5,7 +5,7 @@ const CustomerBenefits = () => {
     return (
         <div className="bg-black sm:my-20 my-5 py-12">
             <div className="2xl:mx-32 lg:mx-0 xl:mx-24 lg:px-2 px-4 xl:px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 xl:gap-6">
-                {/* Row 1 */}
+             
                 <Fade duration={2000} triggerOnce>
                     <div className="flex items-center gap-3 text-white ">
                         <div className="bg-lime-500 xl:p-4 p-2 rounded-full">
@@ -19,7 +19,6 @@ const CustomerBenefits = () => {
                 </Fade>
 
 
-                {/* Row 2 */}
                 <Fade duration={3000} triggerOnce>
                     <div className="flex items-center gap-3 text-white ">
                         <div className="bg-lime-500 xl:p-4 p-2 rounded-full">
@@ -32,7 +31,7 @@ const CustomerBenefits = () => {
                     </div>
                 </Fade>
 
-                {/* Row 3 */}
+
                 <Fade duration={4000} triggerOnce>
                     <div className="flex items-center  gap-3 text-white ">
                         <div className="bg-lime-500 xl:p-4 p-2 rounded-full">
@@ -46,7 +45,7 @@ const CustomerBenefits = () => {
 
                 </Fade>
 
-                {/* Row 4 */}
+  
                 <Fade duration={5000} triggerOnce>
                     <div className="flex items-center gap-3 text-white ">
                         <div className="bg-lime-500 xl:p-4 p-2 rounded-full">
