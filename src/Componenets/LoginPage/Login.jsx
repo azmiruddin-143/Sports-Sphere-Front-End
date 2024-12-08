@@ -22,7 +22,7 @@ const Login = () => {
         const email = event.target.email.value
         const password = event.target.password.value
         const trams = event.target.trams.checked
-        // register setup ///
+
 
         if(!trams){
             toast.error("terms not checked ", {
