@@ -19,6 +19,7 @@ import PrivateRoot from './Componenets/PrivateRoot/PrivateRoot';
 import Update from './Componenets/UpdateCard/Update';
 import Error from './Componenets/404Page/Error';
 import { HelmetProvider } from 'react-helmet-async';
+import AboutUs from './NewPages/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/myEquipmentList",
         element: <PrivateRoot><MyEquipment></MyEquipment></PrivateRoot>
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs></AboutUs>
       },
       {
         path: "/details/:id",
@@ -74,6 +79,5 @@ createRoot(document.getElementById('root')).render(
         <RouterProvider router={router} />
       </StrictMode>
     </HelmetProvider>
-
   </AuthProvider>
 )

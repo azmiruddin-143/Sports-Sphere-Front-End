@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     // User Register//
+    // old//
     
     const { registerUser, myProfileUpdate, googleRegister, setuser } = useContext(authContext)
     const [show, setHide] = useState(false)

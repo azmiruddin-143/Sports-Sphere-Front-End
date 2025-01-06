@@ -3,6 +3,8 @@ import React, { createContext, useEffect, useState } from 'react';
 import { auth } from '../../FirebaseSetup/Firebase.init';
 export const authContext = createContext()
 const AuthProvider = ({ children }) => {
+
+    // old//
     const [user, setuser] = useState(null)
     const [loader, setLoader] = useState(true)
     const provider = new GoogleAuthProvider();
