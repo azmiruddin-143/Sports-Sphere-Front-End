@@ -9,9 +9,9 @@ const MyEquipment = () => {
     const { user } = useContext(authContext)
 
     const [equipment, setEquipment] = useState([]);
-  
 
-    const userEmail = user.email 
+
+    const userEmail = user.email
 
     useEffect(() => {
         const fetchEquipment = async () => {
@@ -20,7 +20,7 @@ const MyEquipment = () => {
                     `https://server-sports.vercel.app/myequipment?email=${userEmail}`
                 );
                 const data = await response.json();
-                setEquipment(data); 
+                setEquipment(data);
             } catch (error) {
                 console.error("Error fetching equipment:", error);
             }
@@ -74,8 +74,8 @@ const MyEquipment = () => {
 
     return (
         <Fade duration={2000} triggerOnce>
-             <Helmet>
-              <title>Sports Sphere | My Equipment</title>
+            <Helmet>
+                <title>Sports Sphere | My Equipment</title>
             </Helmet>
             <div>
 
@@ -90,11 +90,34 @@ const MyEquipment = () => {
                         </div>
 
                         :
-                        <div className='max-w-7xl sm:grid-cols-2 my-12 mx-auto grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 place-items-center'>
-                            {
-                                equipment.map(equipment => <SingleEquipment key={equipment._id} onDelete={handleDelete} equipment={equipment} ></SingleEquipment>)
-                            }
+                        // <div className='max-w-7xl sm:grid-cols-2 my-12 mx-auto grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 place-items-center'>
+                        //     {
+                        //         equipment.map(equipment => <SingleEquipment key={equipment._id} onDelete={handleDelete} equipment={equipment} ></SingleEquipment>)
+                        //     }
+                        // </div>
+
+                        <div className=" overflow-x-auto max-w-6xl mx-auto">
+                            <table className="table">
+                                <thead>
+                                    <tr className='text-lg text-black'>
+                                        <th></th>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Date</th>
+                                        <th>Update</th>
+                                        <th>Dilet</th>
+
+                                    </tr>
+                                </thead>
+                                {
+                                    equipment.map((equipment, index) =>
+                                        <SingleEquipment equipment={equipment} handleDelete ={handleDelete} index={index}></SingleEquipment>
+                                    )
+                                }
+                            </table>
                         </div>
+
                 }
 
 
