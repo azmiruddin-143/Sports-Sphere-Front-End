@@ -1,33 +1,34 @@
 
 import { useLoaderData } from 'react-router-dom';
 import SingleSports from './SingleSports';
-import { Fade } from 'react-awesome-reveal';
+import { Fade, Slide } from 'react-awesome-reveal';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
+
 
 const AllSports = () => {
     const allproductLoader = useLoaderData()
     const [sortedProducts, setSortedProducts] = useState(allproductLoader);
-    const [isSorted,setisSorted] = useState(false)
+    const [isSorted, setisSorted] = useState(false)
     const handleSort = () => {
         fetch("https://server-sports.vercel.app/sportSort")
             .then(res => res.json())
-            .then(data => setSortedProducts(data)) 
-            setisSorted(true)
+            .then(data => setSortedProducts(data))
+        setisSorted(true)
     };
 
-    const handleDefault = () =>{
+    const handleDefault = () => {
         setSortedProducts(allproductLoader)
         setisSorted(false)
     }
-    
+
     return (
         <Fade duration={2000} triggerOnce>
-             <Helmet>
-              <title>Sports Sphere | All Equipment</title>
+            <Helmet>
+                <title>Sports Sphere | All Equipment</title>
             </Helmet>
             <div className='my-10'>
-      
+
                 {
                     !isSorted ? <div className='flex mx-auto my-4 justify-center'>
                         <button onClick={handleSort} className='bg-[#baf120] py-2 px-6 rounded-md'>Sort all price</button>
@@ -39,7 +40,7 @@ const AllSports = () => {
                 }
 
 
-                <div className=" overflow-x-auto max-w-6xl mx-auto">
+                {/* <div className=" overflow-x-auto max-w-6xl mx-auto">
                     <table className="table">
                         <thead>
                             <tr className='text-lg text-black'>
@@ -58,10 +59,21 @@ const AllSports = () => {
                             )
                         }
                     </table>
-                </div>
+                </div> */}
 
+                <div className='sm:my-16 my-5'>
+                    <Slide direction="up" duration={2000} triggerOnce>
+                    <div className='grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-32 xl:mx-24'>
+                        {
+                            sortedProducts.map(sports => <SingleSports key={sports._id} sports={sports} ></SingleSports>)
+                        }
+                    </div>
+
+                  </Slide>
             </div>
-        </Fade>
+
+        </div>
+        </Fade >
     );
 };
 
