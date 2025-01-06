@@ -140,6 +140,16 @@ const Header = () => {
                             >
                                 About Us
                             </NavLink>
+                            <NavLink
+                                to="/contactus"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        : ""
+                                }
+                            >
+                                Contact Us
+                            </NavLink>
 
                             {
                                 user && <NavLink

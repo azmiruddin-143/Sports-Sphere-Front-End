@@ -20,6 +20,7 @@ import Update from './Componenets/UpdateCard/Update';
 import Error from './Componenets/404Page/Error';
 import { HelmetProvider } from 'react-helmet-async';
 import AboutUs from './NewPages/AboutUs';
+import ContactUs from './NewPages/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/aboutus",
         element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/contactus",
+        element: <ContactUs></ContactUs>
       },
       {
         path: "/details/:id",
