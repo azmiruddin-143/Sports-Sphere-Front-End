@@ -104,7 +104,7 @@ const MyEquipment = () => {
                                         <th>Name</th>
                                         <th>Category</th>
                                         <th>Price</th>
-                                        <th>Date</th>
+                                        <th>Rating</th>
                                         <th>Update</th>
                                         <th>Dilet</th>
 

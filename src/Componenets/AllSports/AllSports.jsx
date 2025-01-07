@@ -29,50 +29,35 @@ const AllSports = () => {
             </Helmet>
             <div className='my-10'>
 
-                {
-                    !isSorted ? <div className='flex mx-auto my-4 justify-center'>
-                        <button onClick={handleSort} className='bg-[#baf120] py-2 px-6 rounded-md'>Sort all price</button>
-                    </div> :
-                        <div className='flex mx-auto my-4 justify-center'>
-                            <button onClick={handleDefault} className='bg-[#baf120] py-2 px-6 rounded-md'>Default Price</button>
-                        </div>
+                <div className='flex items-center justify-around'>
+                    <h1 className='2xl:text-4xl sm:text-3xl text-2xl  border-b border-[#baf120] rounded-xl p-2'>Products ({sortedProducts.length})</h1>
 
-                }
+                    {
+                        !isSorted ? <div className=' my-4 '>
+                            <button onClick={handleSort} className='bg-[#baf120] py-2 px-6 rounded-md'>Sort all price</button>
+                        </div> :
+                            <div className='my-4 '>
+                                <button onClick={handleDefault} className='bg-[#baf120] py-2 px-6 rounded-md'>Default Price</button>
+                            </div>
+
+                    }
+                </div>
 
 
-                {/* <div className=" overflow-x-auto max-w-6xl mx-auto">
-                    <table className="table">
-                        <thead>
-                            <tr className='text-lg text-black'>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Price</th>
-                                <th>Date</th>
-                                <th>Action</th>
 
-                            </tr>
-                        </thead>
-                        {
-                            sortedProducts.map((sports, index) =>
-                                <SingleSports sports={sports} index={index}></SingleSports>
-                            )
-                        }
-                    </table>
-                </div> */}
 
                 <div className='sm:my-16 my-5'>
                     <Slide direction="up" duration={2000} triggerOnce>
-                    <div className='grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-32 xl:mx-24'>
-                        {
-                            sortedProducts.map(sports => <SingleSports key={sports._id} sports={sports} ></SingleSports>)
-                        }
-                    </div>
+                        <div className='grid sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-32 xl:mx-24'>
+                            {
+                                sortedProducts.map(sports => <SingleSports key={sports._id} sports={sports} ></SingleSports>)
+                            }
+                        </div>
 
-                  </Slide>
+                    </Slide>
+                </div>
+
             </div>
-
-        </div>
         </Fade >
     );
 };
