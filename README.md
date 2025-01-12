@@ -1,4 +1,3 @@
-# Assignment Category : Lotus
 # Website Name : Sports Sphere
 # Website Link : https://sports-equipment-store-2ec4b.web.app/
 # Features of Sports Website
