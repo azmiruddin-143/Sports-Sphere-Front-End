@@ -5,13 +5,15 @@ import paymnet from "../../assets/payment-image.png"
 import { FaLinkedin } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
+import footerlogo from '../../assets/website-site-icon.png'
 
 const Footer = () => {
     return (
         <div className='bg-[#13160b]   '>
             <div className='grid sm:py-16 py-8 lg:grid-cols-4 gap-y-12 mx-8 sm:grid-cols-3 2xl:mx-36 xl:mx-28 lg:mx-10 sm:place-items-center xl:place-items-center my-0 md:my-0'>
-                <div className='space-y-4 sm:mt-12 md:mt-4 xl:mt-0 ' >
-                    <h1 className='2xl:text-4xl xl:text-3xl text-2xl text-[white] font-bold'>Sports Sphere</h1>
+                <div className='space-y-4 sm:mt-14 md:mt-10 xl:mt-10 ' >
+                    <img className='w-20' src={footerlogo} alt="" />
+                    {/* <h1 className='2xl:text-4xl xl:text-3xl text-2xl text-[white] font-bold'>Sports Sphere</h1> */}
                     <p className='xl:w-10/12 dark:text-white text-[#d1cccc] 2xl:text-lg xl:text-base'>Shop premium sports gear at unbeatable prices. Enjoy free shipping, exclusive deals, and fast delivery worldwide!"</p>
                     <div className='flex text-white items-center gap-3'>
                         <FaFacebook size={30} />
@@ -22,12 +24,16 @@ const Footer = () => {
 
 
                 <div className=''>
-                    <h1 className='text-[white] 2xl:text-3xl mt-0 text-2xl font-bold  lg:text-2xl'>Quicklinks</h1>
+                    <h1 className='text-[white] 2xl:text-3xl mt-16 xl:mt-20 text-2xl font-bold  lg:text-2xl'>Quicklinks</h1>
                     <ul className='xl:text-lg dark:text-white text-[#d1cccc] space-y-2 mt-4'>
                         <div><NavLink to="/">Home</NavLink></div>
                         <div><NavLink to="allSportsEquipment">All Sports Equipment</NavLink></div>
                         <div><NavLink to="/addEquipment">Add Equipment</NavLink></div>
                         <div><NavLink to="/myEquipmentList">My Equipment List
+                        </NavLink></div>
+                        <div><NavLink to="/aboutus">About Us
+                        </NavLink></div>
+                        <div><NavLink to="/contactus">Conatct US
                         </NavLink></div>
                     </ul>
                 </div>
@@ -37,8 +43,8 @@ const Footer = () => {
                     <ul className='xl:text-lg dark:text-white text-[#d1cccc] space-y-2 mt-4'>
                         <div><NavLink to="/helpcenter"> Help Center</NavLink></div>
                         <div><NavLink to="/faq"> FAQ's</NavLink></div>
-                        <div><NavLink to="privacypolicy">Privacy Policy</NavLink></div>
-                        <div><NavLink to="termscondition">Terms & Condition</NavLink></div>
+                        <div><NavLink to="/helpcenter">Privacy Policy</NavLink></div>
+                        <div><NavLink to="/faq">Terms & Condition</NavLink></div>
                     </ul>
                 </div>
                 <div>
@@ -62,7 +68,7 @@ const Footer = () => {
             </div>
             <hr />
             <div className='sm:flex  justify-between 2xl:mx-36 mx-8 xl:mx-28 items-center'>
-                <h1 className='sm:text-base text-sm ba py-6 text-white'>Copyright © 2024 Sports Sphere. All Right Reserved</h1>
+                <h1 className='sm:text-base text-sm ba py-6 text-white'>Copyright © 2025 Sports Sphere. All Right Reserved</h1>
                 <img className='w-[200px]' src={paymnet} alt="" />
             </div>
 

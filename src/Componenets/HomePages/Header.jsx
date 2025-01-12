@@ -7,12 +7,10 @@ import "react-tooltip/dist/react-tooltip.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { authContext } from '../AuthProvider/AuthProvider';
-import DarkMode from './DarkMood';
+// import DarkMode from './DarkMood';
 
 const Header = () => {
-
     // old header//
-
     const { user, userLogout } = useContext(authContext);
     const [isBlurred, setIsBlurred] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -96,6 +94,8 @@ const Header = () => {
                                     {
                                         user && <NavLink to="/myEquipmentList" onClick={() => setIsDropdownOpen(false)}>My Equipment List</NavLink>
                                     }
+                                    <NavLink to="/aboutus" onClick={() => setIsDropdownOpen(false)}>About us</NavLink>
+                                    <NavLink to="/contactus" onClick={() => setIsDropdownOpen(false)}>Contact US</NavLink>
 
                                 </ul>
                             )}
@@ -130,26 +130,7 @@ const Header = () => {
                             >
                                 All Sports Equipment
                             </NavLink>
-                            <NavLink
-                                to="/aboutus"
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
-                                        : ""
-                                }
-                            >
-                                About Us
-                            </NavLink>
-                            <NavLink
-                                to="/contactus"
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
-                                        : ""
-                                }
-                            >
-                                Contact Us
-                            </NavLink>
+
 
                             {
                                 user && <NavLink
@@ -176,6 +157,27 @@ const Header = () => {
                                     My Equipment List
                                 </NavLink>
                             }
+
+                            <NavLink
+                                to="/aboutus"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        : ""
+                                }
+                            >
+                                About Us
+                            </NavLink>
+                            <NavLink
+                                to="/contactus"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        : ""
+                                }
+                            >
+                                Contact Us
+                            </NavLink>
                         </ul>
                     </div>
                     <div className="navbar-end">
@@ -270,3 +272,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// end//

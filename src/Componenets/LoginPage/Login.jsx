@@ -6,6 +6,7 @@ import { authContext } from '../AuthProvider/AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { Helmet } from 'react-helmet-async';
+import loginimage from '../../assets/Login-cuate.png'
 
 const Login = () => {
     const { loginUser, googleRegister, setuser } = useContext(authContext)
@@ -75,11 +76,12 @@ const Login = () => {
            <Helmet>
               <title>Sports Sphere | Login</title>
             </Helmet>
-            <div className="sm:my-10 my-5 ">
-                <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
-                    <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
+            <Link to="/" ><h1 className='max-w-2xl mx-auto font-bold bg-[#9dc923] w-fit py-2 px-5 rounded-md my-5'>Home Page</h1></Link>
+            <div className="sm:my-10 mx-auto max-w-6xl  flex my-5 ">
+                <img className='w-1/3 object-cover' src={loginimage} alt="" />
+                <div className="hero-content flex-1  flex-col mx-auto lg:flex-row-reverse">
+                    <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl">
                         <form onSubmit={loginForm} className="card-body">
-
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

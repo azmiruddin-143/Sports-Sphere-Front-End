@@ -1,5 +1,4 @@
-// import React, { useState } from "react";
-// import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaClock } from "react-icons/fa";
 import contact from '../../src/assets/contact-image.jpg'

@@ -21,6 +21,8 @@ import Error from './Componenets/404Page/Error';
 import { HelmetProvider } from 'react-helmet-async';
 import AboutUs from './NewPages/AboutUs';
 import ContactUs from './NewPages/ContactUs';
+import HelpCenter from './NewPages/HelpCenter';
+import Faq from './NewPages/Faq';
 
 const router = createBrowserRouter([
   {
@@ -59,14 +61,7 @@ const router = createBrowserRouter([
         element: <PrivateRoot><Details></Details></PrivateRoot>,
         loader: ({ params }) => fetch(`https://server-sports.vercel.app/sportsall/${params.id}`)
       },
-      {
-        path: "/register",
-        element: <Register></Register>,
-      },
-      {
-        path: "login",
-        element: <Login></Login>,
-      },
+     
       {
         path: "/update/:id",
         element: <Update></Update>,
@@ -74,6 +69,23 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  {
+    path: "/register",
+    element: <Register></Register>,
+  },
+  {
+    path: "login",
+    element: <Login></Login>,
+  },
+  {
+    path:"/helpcenter",
+    element: <HelpCenter></HelpCenter>
+  },
+  {
+    path:"/faq",
+    element: <Faq></Faq>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
